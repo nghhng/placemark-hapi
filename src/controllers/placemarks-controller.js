@@ -27,7 +27,7 @@ export const placemarksController = {
       //   total += placemark.name;
       // });
       return h.view("Report", {
-        title: "Placemarks to Date",
+        title: "Placemarks List",
         placemarks: placemarks,
         // total: total,
       });
