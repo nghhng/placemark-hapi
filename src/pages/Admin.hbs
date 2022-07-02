@@ -1,0 +1,89 @@
+<div class="columns is-vcentered">
+  <div class="column is-half">
+    {{> TitleBar title="Placemark Services Inc." subTitle="Latest Placemarks"}}
+  </div>
+  <div class="column">
+    {{> MainNavigator }}
+  </div>
+</div>
+
+<div class="title is-5"> List of Users</div>
+
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Scope</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+      <tr>
+        <td>
+          {{firstName}}
+        </td>
+        <td>
+          {{lastName}}
+        </td>
+        <td>
+          {{email}}
+        </td>
+        <td>
+          {{scope}}
+        </td>
+                <td>
+      <a href="/admin/deleteuser/{{_id}}" class="button">
+      <i class="fas fa-trash"></i>
+    </a>
+    
+        </td>
+        <td>
+      <a href="/admin/makeadmin/{{_id}}" class="button">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+    
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<div class="title is-5"> List of Placemarks</div>
+
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>User</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each placemarks}}
+      <tr>
+        <td>
+          {{name}}
+        </td>
+        <td>
+          {{lat}}
+        </td>
+        <td>
+          {{lng}}
+        </td>
+        <td>
+          {{user.firstName}} {{user.lastName}}
+        </td>
+                <td>
+      <a href="/admin/deleteplacemark/{{_id}}" class="button">
+      <i class="fas fa-trash"></i>
+    </a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+{{> CategoryForm }}

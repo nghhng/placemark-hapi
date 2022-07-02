@@ -1,0 +1,41 @@
+<div class="columns is-vcentered">
+  <div class="column is-half">
+    {{> TitleBar title="Placemark Services Inc." subTitle="Placemark Today!"}}
+  </div>
+  <div class="column">
+    {{> MainNavigator }}
+  </div>
+</div>
+
+<section class="section columns is-vcentered">
+  <div class="column has-text-centered">
+    <div class="title">
+    {{placemark.name}}    </div>
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+       
+        <td>
+          {{placemark.lat}}
+        </td>
+        <td>
+          {{placemark.lng}}
+        </td>
+        <td>
+          {{placemark.description}}
+        </td>
+      </tr>
+  </tbody>
+</table>
+  </div>
+  <div class="column">
+    {{> PlacemarkImage }}
+  </div>
+</section>

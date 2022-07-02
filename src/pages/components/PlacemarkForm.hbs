@@ -1,0 +1,27 @@
+<form class="box" action="/addplacemark" method="POST">
+  <label>Enter Placemark Details:</label>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Name" name="name" />
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Latitude" name="lat" />
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Longitude" name="lng" />
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Description" name="description" />
+      </div>
+      
+      <div class="field">
+        <div class="is-5"> Category</div>
+        <div class="select">
+          <select name="category" placeholder="Choose Category">
+            {{#each categories }}
+              <option> {{title}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+  <button class="button is-primary">Add Placemark</button>
+</form>

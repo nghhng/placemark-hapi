@@ -1,0 +1,23 @@
+<table class="table is-fullwidth">
+  <thead>
+    <th>Name</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Category</th>
+  </thead>
+  <tbody>
+    {{#each placemarks}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{lat}}</td>
+        <td>{{lng}}</td>
+        <td>{{category.title}}</td>
+        <td>
+      <a href="/placemark/{{_id}}" class="button">
+      <i class="fas fa-info"></i>
+    </a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
